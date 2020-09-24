@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  proto_news:
+    build: "./proto_news"
+    networks:
+      - internal
+
+  proto_lunch:
+    build: "./proto_lunch"
+    networks:
+      - internal
+
+  revprox:
+    build: "./revprox"
+    ports:
+      - "8000:8000"
+    networks:
+      - internal
+      - external
+
+
+networks:
+  external:
+  internal:
