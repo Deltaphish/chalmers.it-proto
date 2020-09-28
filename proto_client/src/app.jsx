@@ -6,6 +6,8 @@ import {
 	Link
 } from "react-router-dom";
 
+import NewsListPage from "./components/NewsListPage"
+
 export default function App() {
 	return (
 		<Router>
@@ -36,8 +38,7 @@ export default function App() {
 function Home() {
 	return(
 		<div>
-			<h2> Welcome to chalmers.it </h2>
-			<h3> Work in progress </h3>
+			<NewsListPage />
 		</div>
 	);
 }

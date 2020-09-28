@@ -14,6 +14,7 @@
     "html-webpack-plugin": "^4.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-relay": "^10.0.1",
     "react-router-dom": "^5.2.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
@@ -21,6 +22,13 @@
   },
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "relay": "relay-compiler --src ./src/components --schema ./data/schema.graphql --extensions js jsx"
+  },
+  "devDependencies": {
+    "babel-plugin-relay": "^10.0.1",
+    "graphql": "^15.3.0",
+    "relay-compiler": "^10.0.1",
+    "relay-config": "^10.0.1"
   }
 }

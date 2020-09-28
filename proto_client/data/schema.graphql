@@ -1,0 +1,23 @@
+schema {
+  query: Query
+}
+
+type Course {
+  name: String
+  dish: String
+}
+
+type News {
+  title: String
+  details: String
+}
+
+type Query {
+  news: [News]
+  lunch: [Resturant]
+}
+
+type Resturant {
+  name: String
+  courses: [Course]
+}
