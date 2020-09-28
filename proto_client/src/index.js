@@ -5,11 +5,11 @@ import ReactDOM from 'react-dom';
 
 import NewsBlock from './components/NewsBlock.jsx'
 
+import App from './app.jsx'
+
 const title = "Webpack with react and sutch"
 
 ReactDOM.render(
-	<div>{title}
-		<NewsBlock/>
-	</div>,
+	<App/>,
 	document.getElementById('app')
 );
