@@ -4,13 +4,13 @@ import {
 	graphql,
 } from 'react-relay'
 
-import environment from "./Environment.js"
+import environment from "../Environment.js"
 
 import NewsList from "./NewsList"
 
 const NewsListPageQuery = graphql`
 	query NewsListPageQuery {
-		news {
+		articleRecords {
 			...NewsList_newslist
 		}
 	}
@@ -27,7 +27,12 @@ class NewsListPage extends Component {
 						return <div>{error.message}</div>;
 					}
 					else if(props) {
-						return <NewsList newslist={props.news} />
+						return(
+							<div>
+								<h1>News</h1>
+								<NewsList newslist={props.articleRecords} />
+							</div>
+						);
 					}
 					return <div>Loading</div>
 				}}

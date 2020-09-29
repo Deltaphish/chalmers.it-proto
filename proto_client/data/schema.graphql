@@ -1,5 +1,11 @@
-schema {
-  query: Query
+type Article {
+  title: String
+  details: String
+}
+
+type ArticleRecords {
+  articles: [Article]
+  foo: String
 }
 
 type Course {
@@ -7,13 +13,8 @@ type Course {
   dish: String
 }
 
-type News {
-  title: String
-  details: String
-}
-
 type Query {
-  news: [News]
+  articleRecords: ArticleRecords
   lunch: [Resturant]
 }
 
@@ -21,3 +22,4 @@ type Resturant {
   name: String
   courses: [Course]
 }
+

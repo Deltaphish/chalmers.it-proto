@@ -37,6 +37,7 @@ fragment NewsList_newslist on ArticleRecords {
 
 fragment News_news on Article {
   title
+  details
 }
 */
 
@@ -95,6 +96,13 @@ const node/*: ConcreteRequest*/ = {
                 "kind": "ScalarField",
                 "name": "title",
                 "storageKey": null
+              },
+              {
+                "alias": null,
+                "args": null,
+                "kind": "ScalarField",
+                "name": "details",
+                "storageKey": null
               }
             ],
             "storageKey": null
@@ -105,12 +113,12 @@ const node/*: ConcreteRequest*/ = {
     ]
   },
   "params": {
-    "cacheID": "02c946b65d7cd76d5fd52673b4a060c2",
+    "cacheID": "f38bb4ca1aff432cde3283cbbc46f025",
     "id": null,
     "metadata": {},
     "name": "NewsListPageQuery",
     "operationKind": "query",
-    "text": "query NewsListPageQuery {\n  articleRecords {\n    ...NewsList_newslist\n  }\n}\n\nfragment NewsList_newslist on ArticleRecords {\n  articles {\n    ...News_news\n  }\n}\n\nfragment News_news on Article {\n  title\n}\n"
+    "text": "query NewsListPageQuery {\n  articleRecords {\n    ...NewsList_newslist\n  }\n}\n\nfragment NewsList_newslist on ArticleRecords {\n  articles {\n    ...News_news\n  }\n}\n\nfragment News_news on Article {\n  title\n  details\n}\n"
   }
 };
 // prettier-ignore

@@ -13,6 +13,7 @@ declare export opaque type News_news$ref: FragmentReference;
 declare export opaque type News_news$fragmentType: News_news$ref;
 export type News_news = {|
   +title: ?string,
+  +details: ?string,
   +$refType: News_news$ref,
 |};
 export type News_news$data = News_news;
@@ -36,12 +37,19 @@ const node/*: ReaderFragment*/ = {
       "kind": "ScalarField",
       "name": "title",
       "storageKey": null
+    },
+    {
+      "alias": null,
+      "args": null,
+      "kind": "ScalarField",
+      "name": "details",
+      "storageKey": null
     }
   ],
   "type": "Article",
   "abstractKey": null
 };
 // prettier-ignore
-(node/*: any*/).hash = 'f388492996083147698e756821594d88';
+(node/*: any*/).hash = '65eeda5f85319e0df1ae877adfaf5b28';
 
 module.exports = node;

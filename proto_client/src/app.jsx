@@ -6,7 +6,8 @@ import {
 	Link
 } from "react-router-dom";
 
-import NewsListPage from "./components/NewsListPage"
+import NewsListPage from "./components/News/NewsListPage"
+import ResturantList from "./components/Lunch/ResturantList"
 
 export default function App() {
 	return (
@@ -39,6 +40,7 @@ function Home() {
 	return(
 		<div>
 			<NewsListPage />
+			<ResturantList />
 		</div>
 	);
 }
