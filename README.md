@@ -1,3 +1,2 @@
-Reverse proxy for chalmers.it
-
-to run: `docker-compose up`
+# Prototype system architecture for new chalmers.it
+to run `docker-compose up --build`
